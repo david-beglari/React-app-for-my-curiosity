@@ -3,19 +3,29 @@ import './Home.css';
 
 class Home extends Component {
 
-    render() {
-        const StyleForText = {
-            color: 'red'
-        };
+    constructor() {
+        super(arguments);
 
+        this.state = {
+            name: 'Good name'
+        }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                name: 'Cristina'
+            });
+        }, 1000);
+    }
+
+    render() {
         return (
             <div className="Home">
-                <h1>Welcome to Codejobs</h1>
+                <h1>Welcome to code</h1>
 
-                <p style={StyleForText}>
-                    In this recipe you will learn how to add styles to
-                    components. If you want to learn more you can visit
-                    our Youtube Channel at
+                <p>
+                    My name is { this.state.name }
                     <a href="http://youtube.com/codejobs">Codejobs</a>.
                 </p>
             </div>
