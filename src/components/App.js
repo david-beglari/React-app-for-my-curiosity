@@ -1,16 +1,16 @@
 import React from 'react';
-import Home from './Home/Home'
 import './App.css';
 import Header from "../shared/components/layout/Header";
 import Footer from "../shared/components/layout/Footer";
 import Content from "../shared/components/layout/Content";
+import ToDo from "./ToDo/ToDo";
 
 function App() {
     return (
         <div className="App">
-            <Header title="Welcome to Fuck"/>
+            <Header title="Welcome to To do task list"/>
             <Content>
-                <Home/>
+                <ToDo />
             </Content>
             <Footer/>
         </div>

@@ -9,11 +9,11 @@ const Header = props => {
     } = props;
 
     return (
-        <header className="App-header">
+        <header className="">
             <a href={url}>
                 <img src={logo} className="App-logo" alt="logo" />
             </a>
-            <h1 className="App-title">{title}</h1>
+            <h5 className="App-title">{title}</h5>
         </header>
     );
 };

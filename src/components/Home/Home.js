@@ -4,7 +4,7 @@ import './Home.css';
 class Home extends Component {
 
     constructor() {
-        super(arguments);
+        super();
 
         this.state = {
             name: 'Good name'
@@ -26,7 +26,7 @@ class Home extends Component {
 
                 <p>
                     My name is { this.state.name }
-                    <a href="http://youtube.com/codejobs">Codejobs</a>.
+                    <a href="http://youtube.com">Good morning my dear</a>.
                 </p>
             </div>
         )
