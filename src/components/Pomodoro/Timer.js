@@ -104,6 +104,39 @@ class Timer extends Component {
 
         return this.setTime(this.times.longBreak);
 
+    };
+
+    restartInterval = () => {
+        // Clearing the interval
+        clearInterval(this.interval);
+
+        // Execute countDown function every second
+        this.interval = setInterval(this.countDown, 1000);
+    };
+
+    countDown = () => {
+        // If the time reach 0 then we display Buzzzz! alert.
+        if (this.state.time === 0) {
+            this.setState({
+                alert: {
+                    type: 'buz',
+                    message: 'Buzzzzzzzz!'
+                }
+            });
+        } else {
+            // We decrease the time second by second
+            this.setState({
+                time: this.state.time - 1
+            });
+        }
+    };
+
+    displayTimer(seconds) {
+        // Formatting the time into mm:ss
+        const m = Math.floor(seconds % 3600 / 60);
+        const s = Math.floor(seconds % 3600 % 60);
+
+        return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
     }
 }
 
